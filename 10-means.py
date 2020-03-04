@@ -161,13 +161,13 @@ for c in com:
     c.sort()
 print(com)
 
-# import shutil
-# from distutils import dir_util
-# for in_list in com:
-#     first = in_list[0]
-#     later = [l for l in in_list[1:]]
-#     for el in later:
-#         dir_util.copy_tree(make_dir + '/label' + str(el), 
-#                            make_dir + '/label' + str(first))
-#         shutil.rmtree(make_dir + '/label' + str(el))
+import shutil
+from distutils import dir_util
+for in_list in com:
+    first = in_list[0]
+    later = [l for l in in_list[1:]]
+    for el in later:
+        dir_util.copy_tree(make_dir + '/label' + str(el), 
+                           make_dir + '/label' + str(first))
+        shutil.rmtree(make_dir + '/label' + str(el))
 
